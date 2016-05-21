@@ -1,0 +1,415 @@
+2016-05-17 02:27:25 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(283): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /var/www/html/shop/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#12 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\SiteController))
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#15 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#18 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#20 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#21 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+2016-05-17 02:27:25 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57786'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463452045.2506
+    'REQUEST_TIME' => 1463452045
+]
+2016-05-17 02:27:25 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' 
+
+in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/shop/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#16 {main}
+2016-05-17 02:27:25 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57786'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463452045.2506
+    'REQUEST_TIME' => 1463452045
+]
+2016-05-17 02:40:26 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(283): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /var/www/html/shop/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#12 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\SiteController))
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#15 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#18 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#20 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#21 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+2016-05-17 02:40:26 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57932'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463452826.918
+    'REQUEST_TIME' => 1463452826
+]
+2016-05-17 02:40:26 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' 
+
+in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/shop/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#16 {main}
+2016-05-17 02:40:26 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '57932'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463452826.918
+    'REQUEST_TIME' => 1463452826
+]
+2016-05-17 02:56:28 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(283): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#10 /var/www/html/shop/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#12 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\SiteController))
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#15 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#18 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#20 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#21 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#23 {main}
+2016-05-17 02:56:28 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58116'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463453788.0903
+    'REQUEST_TIME' => 1463453788
+]
+2016-05-17 02:56:28 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory is not writable by the Web process: /var/www/html/shop/frontend/web/assets' 
+
+in /var/www/html/shop/vendor/yiisoft/yii2/web/AssetManager.php:213
+
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/di/Container.php(153): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/View.php(223): yii\base\Application->getAssetManager()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/Component.php(130): yii\web\View->getAssetManager()
+#9 /var/www/html/shop/vendor/yiisoft/yii2-debug/panels/AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 /var/www/html/shop/vendor/yiisoft/yii2-debug/LogTarget.php(118): yii\debug\LogTarget->export()
+#12 /var/www/html/shop/vendor/yiisoft/yii2/log/Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/log/Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#16 {main}
+2016-05-17 02:56:28 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58116'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463453788.0903
+    'REQUEST_TIME' => 1463453788
+]
+2016-05-20 07:15:38 [127.0.0.1][1][me96j9k6el6v3e1kpcvka83kq1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "wechat/admin/wechat/create".' in /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('wechat/admin/we...', Array)
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-05-20 07:15:38 [127.0.0.1][1][me96j9k6el6v3e1kpcvka83kq1][info][application] $_GET = [
+    'r' => 'wechat/admin/wechat/create'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b839b3b09ca17ff08a74bf7fa27c3d70d0845770bcd98e64626c2d6ea0882c57a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-i1LrSht5-IJn6q2rpLJeeQJFb8EV7OX\";}'
+    'PHPSESSID' => '4eo8t9l632s4h8eth8orgc3me1'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=wechat%2Fadmin%2Fwechat%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=wechat%2Fadmin%2Fwechat%2Fcreate'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '50916'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b839b3b09ca17ff08a74bf7fa27c3d70d0845770bcd98e64626c2d6ea0882c57a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-i1LrSht5-IJn6q2rpLJeeQJFb8EV7OX%22%3B%7D; PHPSESSID=4eo8t9l632s4h8eth8orgc3me1; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1463728538.1452
+    'REQUEST_TIME' => 1463728538
+]
