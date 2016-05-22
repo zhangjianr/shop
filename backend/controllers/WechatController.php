@@ -32,6 +32,7 @@ use yii\web\Controller;
             $arr = array($token, $timestamp, $nonce);
             sort($arr);
             $arrstr = implode( $arr );
+            $arrstr = sha1( $arrstr );
             if($arrstr == $signature){
                 echo $echoStr;
                 exit;
