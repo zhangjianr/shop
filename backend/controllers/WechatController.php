@@ -21,18 +21,13 @@ use yii\web\Controller;
          */
         public function actionConf()
         {
-            //$request = Yii::$app->request;
+            $request = Yii::$app->request;
 
-//            $token = 'weixin';
-//            $echoStr = $request->get('echostr');
-//            $signature = $request->get('signature');
-//            $timestamp = $request->get('timestamp');
-//            $nonce = $request->get('nonce');
             $token = 'weixin';
-            $echoStr = $_GET['echostr'];
-            $signature = $_GET['signature'];
-            $timestamp = $_GET['timestamp'];
-            $nonce = $_GET['nonce'];
+            $echoStr = $request->get('echostr');
+            $signature = $request->get('signature');
+            $timestamp = $request->get('timestamp');
+            $nonce = $request->get('nonce');
 
             $arr = array($token, $timestamp, $nonce);
             sort($arr, SORT_STRING);
