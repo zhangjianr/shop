@@ -26,7 +26,7 @@ use yii\web\Controller;
             $token = 'weixin';
             $echoStr = $request->get('echostr');
             $signature = $request->get('signature');
-            $timestamp = $retuest->get('timestamp');
+            $timestamp = $request->get('timestamp');
             $nonce = $request->get('nonce');
 
             $arr = array($token, $timestamp, $nonce);
