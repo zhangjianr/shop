@@ -104,7 +104,7 @@ use yii\web\Controller;
             }]
        }]
  }';
-            $re = $this->actionHttpcurl($url,'post',$data)
+            $re = $this->actionHttpcurl($url,'post',$data);
 print_r($re);
         }
     }
