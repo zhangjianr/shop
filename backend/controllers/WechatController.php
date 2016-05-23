@@ -45,18 +45,30 @@ use yii\web\Controller;
         {
             $arr = $GLOBALS['HTTP_RAW_POST_DATA'];
             $wxobj = simplexml_load_string($arr);
-            switch ( strtolower($wxobj->MsgType) ){
-                case 'news':;
-                    break;
-                case 'text':
-                    $this->actionTextmsg($wxobj);
-                    break;
-                case 'event':
-//                     if( strtolower($wxobj->Event) == 'subscribe'){
-                        $this->actionTextmsg($wxobj);
-//                     };
-                    break;
-            }
+            $fromuser = $wxobj->ToUserName;
+            $touser = $wxobj->FromUserName;
+            $content = '回复内容';
+            $template = '<xml>
+                     <ToUserName><![CDATA[%s]]></ToUserName>
+                     <FromUserName><![CDATA[%s]]></FromUserName>
+                     <CreateTime>'.time().'</CreateTime>
+                     <MsgType><![CDATA[text]]></MsgType>
+                     <Content><![CDATA[%s]]></Content>
+                     </xml>';
+            $info = sprintf($template,$touser,$fromuser,$content);
+            echo info;
+//            switch ( strtolower($wxobj->MsgType) ){
+//                case 'news':;
+//                    break;
+//                case 'text':
+//                    $this->actionTextmsg($wxobj);
+//                    break;
+//                case 'event':
+////                     if( strtolower($wxobj->Event) == 'subscribe'){
+//                        $this->actionTextmsg($wxobj);
+////                     };
+//                    break;
+//            }
 
         }
 
