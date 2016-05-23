@@ -29,15 +29,15 @@ use yii\web\Controller;
             $timestamp = $request->get('timestamp');
             $nonce = $request->get('nonce');
 
-            $arr = array($token, $timestamp, $nonce);
-            sort($arr, SORT_STRING);
-            $arrstr = implode( $arr );
-            $arrstr = sha1( $arrstr );
-            if($arrstr == $signature){
+            $tmpArr = array($token, $timestamp, $nonce);
+            sort($tmpArr, SORT_STRING);
+            $tmpStr = implode( $tmpArr );
+            $tmpStr = sha1( $tmpStr );
+
+            if($tmpStr == $signature){
+                //$this->actionReponsemsg();
                 echo $echoStr;
                 exit;
-            }else{
-                $this->actionReponsemsg();
             }
         }
 
@@ -49,12 +49,18 @@ use yii\web\Controller;
             $touser = $wxobj->FromUserName;
             $content = '回复内容';
             $template = '<xml>
-                     <ToUserName><![CDATA[%s]]></ToUserName>
-                     <FromUserName><![CDATA[%s]]></FromUserName>
-                     <CreateTime>%s</CreateTime>
-                     <MsgType><![CDATA[text]]></MsgType>
-                     <Content><![CDATA[%s]]></Content>
-                     </xml>';
+ <ToUserName><![CDATA[%s]]></ToUserName>
+ <FromUserName><![CDATA[%s]]></FromUserName>
+ <CreateTime>%s</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[%s]]></Content>
+ </xml>';
+
+
+
+
+
+
             $info = sprintf($template,$touser,$fromuser,time(),$content);
             echo info;
 //            switch ( strtolower($wxobj->MsgType) ){
