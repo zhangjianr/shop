@@ -35,9 +35,12 @@ use yii\web\Controller;
             $tmpStr = sha1( $tmpStr );
 
             if($tmpStr == $signature){
-                //$this->actionReponsemsg();
-                echo $echoStr;
-                exit;
+                if($echoStr){
+                    echo $echoStr;
+                    exit;
+                }else{
+                    $this->actionReponsemsg();
+                }
             }
         }
 
