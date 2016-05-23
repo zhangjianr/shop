@@ -48,23 +48,24 @@ use yii\web\Controller;
             switch ( strtolower($wxobj->MsgType) ){
                 case 'news':;
                     break;
-                case 'text':;
+                case 'text':
+                    $this->actionTextmsg($wxobj);
                     break;
                 case 'event':
-                     if( strtolower($wxobj->Event) == 'subscribe'){
-                        $this->actionTextmsg($wxobj,'aaa');
-                     };
+//                     if( strtolower($wxobj->Event) == 'subscribe'){
+                        $this->actionTextmsg($wxobj);
+//                     };
                     break;
             }
 
         }
 
-        public function actionNewsmsg($wxobj,$keyword)
+        public function actionNewsmsg($wxobj)
         {
 
         }
 
-        public function actionTextmsg($wxobj,$keyword)
+        public function actionTextmsg($wxobj)
         {
             $fromuser = $wxobj->ToUserName;
             $touser = $wxobj->FromUserName;
