@@ -51,11 +51,11 @@ use yii\web\Controller;
             $template = '<xml>
                      <ToUserName><![CDATA[%s]]></ToUserName>
                      <FromUserName><![CDATA[%s]]></FromUserName>
-                     <CreateTime>'.time().'</CreateTime>
+                     <CreateTime>%s</CreateTime>
                      <MsgType><![CDATA[text]]></MsgType>
                      <Content><![CDATA[%s]]></Content>
                      </xml>';
-            $info = sprintf($template,$touser,$fromuser,$content);
+            $info = sprintf($template,$touser,$fromuser,time(),$content);
             echo info;
 //            switch ( strtolower($wxobj->MsgType) ){
 //                case 'news':;
