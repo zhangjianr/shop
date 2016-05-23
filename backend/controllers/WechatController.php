@@ -53,7 +53,7 @@ use yii\web\Controller;
                 case 'event':
                      if( strtolower($wxobj->Event) == 'subscribe'){
                         $this->actionTextmsg($wxobj,'aaa');
-                    };
+                     };
                     break;
             }
 
