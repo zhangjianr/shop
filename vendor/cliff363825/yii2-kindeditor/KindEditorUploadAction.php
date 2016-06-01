@@ -7,12 +7,30 @@ use yii\base\Action;
 /**
  * Class KindEditorUploadAction
  * @package cliff363825\kindeditor
- * @property string $savePath
- * @property string $saveUrl
  * @property int $maxSize
  */
 class KindEditorUploadAction extends Action
 {
+    /**
+     * 文件保存根路径
+     * @var string
+     */
+    public $basePath = '@webroot';
+    /**
+     * 文件保存根url
+     * @var string
+     */
+    public $baseUrl = '@web';
+    /**
+     * 文件保存相对路径
+     * @var string
+     */
+    public $savePath = 'uploads';
+    /**
+     * 文件保存子目录路径
+     * @var array
+     */
+    public $subPath = ['date', 'Ym/d'];
     /**
      * a list of file name extensions that are allowed to be uploaded.
      * 定义允许上传的文件扩展名
@@ -25,17 +43,6 @@ class KindEditorUploadAction extends Action
         'file' => ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'htm', 'html', 'txt', 'zip', 'rar', 'gz', 'bz2'],
     ];
     /**
-     * the file path used to save the uploaded file
-     * 文件保存目录路径
-     * @var string
-     */
-    private $_savePath = '@webroot/uploads';
-    /**
-     * 文件保存目录URL
-     * @var string
-     */
-    private $_saveUrl = '@web/uploads';
-    /**
      * the maximum number of bytes required for the uploaded file.
      * 最大文件大小
      * @var int
@@ -47,19 +54,19 @@ class KindEditorUploadAction extends Action
      */
     public function run()
     {
+        $base_path = rtrim(Yii::getAlias($this->basePath), '\\/') . '/';
+        $base_url = rtrim(Yii::getAlias($this->baseUrl), '\\/') . '/';
+
         //文件保存目录路径
-        $save_path = $this->getSavePath() . '/';
+        $save_path = $base_path . rtrim($this->savePath, '\\/') . '/';
         //文件保存目录URL
-        $save_url = $this->getSaveUrl() . '/';
+        $save_url = $base_url . rtrim($this->savePath, '\\/') . '/';
         //定义允许上传的文件扩展名
-        $ext_arr = $this->extensions;;
+        $ext_arr = $this->extensions;
         //最大文件大小
         $max_size = $this->getMaxSize();
 
-        if (!file_exists($save_path)) {
-            mkdir($save_path, 0777, true);
-        }
-        $save_path = realpath($save_path) . '/';
+        //$save_path = realpath($save_path) . '/';
 
         //PHP上传失败
         if (!empty($_FILES['imgFile']['error'])) {
@@ -139,11 +146,14 @@ class KindEditorUploadAction extends Action
                 $save_path .= $dir_name . "/";
                 $save_url .= $dir_name . "/";
             }
-            $ymd = date("Ym/d");
-            $save_path .= $ymd . "/";
-            $save_url .= $ymd . "/";
+            $ymd = trim($this->resolveSubPath($this->subPath, $file_name));
+            if ($ymd !== '') {
+                $ymd = rtrim($ymd, '\\/');
+                $save_path .= $ymd . "/";
+                $save_url .= $ymd . "/";
+            }
             if (!file_exists($save_path)) {
-                mkdir($save_path, 0777, true);
+                mkdir($save_path, 0755, true);
             }
             //新文件名
             $new_file_name = date("YmdHis") . '_' . rand(10000, 99999) . '.' . $file_ext;
@@ -172,38 +182,6 @@ class KindEditorUploadAction extends Action
     }
 
     /**
-     * @return string
-     */
-    public function getSavePath()
-    {
-        return rtrim(Yii::getAlias($this->_savePath), '\\/');
-    }
-
-    /**
-     * @param string $savePath
-     */
-    public function setSavePath($savePath)
-    {
-        $this->_savePath = $savePath;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSaveUrl()
-    {
-        return rtrim(Yii::getAlias($this->_saveUrl), '\\/');
-    }
-
-    /**
-     * @param string $saveUrl
-     */
-    public function setSaveUrl($saveUrl)
-    {
-        $this->_saveUrl = $saveUrl;
-    }
-
-    /**
      * @return int
      */
     public function getMaxSize()
@@ -216,6 +194,26 @@ class KindEditorUploadAction extends Action
      */
     public function setMaxSize($maxSize)
     {
-        $this->_maxSize = (int)$maxSize;
+        $this->_maxSize = intval($maxSize);
+    }
+
+    /**
+     * @param array|\Closure|string $subPath
+     * @param string $fileName
+     * @return string
+     */
+    private function resolveSubPath($subPath, $fileName)
+    {
+        $path = '';
+        if ($subPath instanceof \Closure) {
+            $path = call_user_func($subPath, $fileName);
+        } elseif (is_array($subPath)) {
+            $func = array_shift($subPath);
+            $params = $subPath;
+            $path = call_user_func_array($func, $params);
+        } elseif (is_string($subPath)) {
+            $path = $subPath;
+        }
+        return $path;
     }
 }

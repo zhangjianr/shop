@@ -7,11 +7,20 @@ use yii\base\Action;
 /**
  * Class KindEditorFileManagerAction
  * @package cliff363825\kindeditor
- * @property string $rootPath
- * @property string $rootUrl
  */
 class KindEditorFileManagerAction extends Action
 {
+    /**
+     * the root directory of the file manager.
+     * 根目录路径，可以指定绝对路径，比如 /var/www/attached/
+     * @var string
+     */
+    public $rootPath = '@webroot/uploads';
+    /**
+     * 根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
+     * @var string
+     */
+    public $rootUrl = '@web/uploads';
     /**
      * a list of file name extensions that are allowed to be uploaded.
      * 定义允许上传的文件扩展名
@@ -29,17 +38,6 @@ class KindEditorFileManagerAction extends Action
      * @var string
      */
     public $order = 'name';
-    /**
-     * the root directory of the file manager.
-     * 根目录路径，可以指定绝对路径，比如 /var/www/attached/
-     * @var string
-     */
-    private $_rootPath = '@webroot/uploads';
-    /**
-     * 根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
-     * @var string
-     */
-    private $_rootUrl = '@web/uploads';
 
     /**
      * Runs the action
@@ -47,11 +45,11 @@ class KindEditorFileManagerAction extends Action
     public function run()
     {
         //根目录路径，可以指定绝对路径，比如 /var/www/attached/
-        $root_path = $this->getRootPath() . '/';
+        $root_path = rtrim(Yii::getAlias($this->rootPath), '\\/') . '/';
         //根目录URL，可以指定绝对路径，比如 http://www.yoursite.com/attached/
-        $root_url = $this->getRootUrl() . '/';
+        $root_url = rtrim(Yii::getAlias($this->rootUrl), '\\/') . '/';
         if (!file_exists($root_path)) {
-            mkdir($root_path, 0777, true);
+            mkdir($root_path, 0755, true);
         }
         //图片扩展名
         $ext_arr = !empty($this->extensions['image']) ? $this->extensions['image'] : [];
@@ -66,7 +64,7 @@ class KindEditorFileManagerAction extends Action
             $root_path .= $dir_name . "/";
             $root_url .= $dir_name . "/";
             if (!file_exists($root_path)) {
-                mkdir($root_path);
+                mkdir($root_path, 0755);
             }
         }
 
@@ -179,37 +177,5 @@ class KindEditorFileManagerAction extends Action
                 return strcmp($a['filename'], $b['filename']);
             }
         }
-    }
-
-    /**
-     * @return string
-     */
-    public function getRootPath()
-    {
-        return rtrim(Yii::getAlias($this->_rootPath), '\\/');
-    }
-
-    /**
-     * @param string $rootPath
-     */
-    public function setRootPath($rootPath)
-    {
-        $this->_rootPath = $rootPath;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRootUrl()
-    {
-        return rtrim(Yii::getAlias($this->_rootUrl), '\\/');
-    }
-
-    /**
-     * @param string $rootUrl
-     */
-    public function setRootUrl($rootUrl)
-    {
-        $this->_rootUrl = $rootUrl;
     }
 }

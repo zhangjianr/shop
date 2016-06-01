@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'weixin' => [
+            'class' => 'backend\modules\weixin\Module',
+        ],
+    ],
     'components' => [
         'user' => [
             'identityClass' => 'backend\models\Admin',

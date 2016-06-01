@@ -19,10 +19,11 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" /-->
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
@@ -30,7 +31,7 @@ AppAsset::register($this);
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="#" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -330,27 +331,24 @@ AppAsset::register($this);
                         <i class="fa fa-weixin text-green"></i> <span>微信</span> <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-desktop text-green"></i><span>系统管理</span> <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href=""><i class="glyphicon glyphicon-user text-yellow"></i> 公众号管理</a></li>
-                            </ul>
-                        </li>
+<!--                        <li class="treeview">-->
+<!--                            <a href="#">-->
+<!--                                <i class="fa fa-desktop text-green"></i><span>系统管理</span> <i class="fa fa-angle-left pull-right"></i>-->
+<!--                            </a>-->
+<!--                            <ul class="treeview-menu">-->
+<!--                                <li><a href="--><?//= Url::toRoute(['/wechat/general'])?><!--"><i class="glyphicon glyphicon-user text-yellow"></i> 公众号管理</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-cog text-green"></i><span>基本功能</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href=""><i class="fa fa-sticky-note-o text-yellow"></i> 文本回复</a></li>
-                                <li><a href=""><i class="fa fa-file-image-o text-red"></i> 图文回复</a></li>
-                                <li><a href=""><i class="fa fa-music text-aqua"></i> 音乐回复</a></li>
-                                <li><a href=""><i class="fa fa-image text-aqua"></i> 图片回复</a></li>
-                                <li><a href=""><i class="fa fa-volume-up text-aqua"></i> 语音回复</a></li>
-                                <li><a href=""><i class="fa fa-video-camera text-aqua"></i> 视频回复</a></li>
-                                <li><a href=""><i class="fa fa-wifi text-aqua"></i> 远程回复</a></li>
-                                <li><a href=""><i class="glyphicon glyphicon-folder-open text-aqua"></i> 素材管理</a></li>
+                                <li><a href="<?= Url::toRoute(['/weixin/keyword/index'])?>"><i class="fa fa-search-plus text-aqua"></i> 关键词管理</a></li>
+                                <li><a href="<?= Url::toRoute(['/weixin/wxnewreply/index'])?>"><i class="fa fa-file-text-o text-yellow"></i> 文本回复</a></li>
+                                <li><a href="<?= Url::toRoute(['/weixin/wxlinkreply/index'])?>"><i class="fa fa-reply text-red"></i> 链接回复</a></li>
+                                <li><a href="<?= Url::toRoute(['/weixin/wxreply/index'])?>"><i class="fa fa-file-image-o text-red"></i> 图文回复</a></li>
+                                <li><a href="<?= Url::toRoute(['/weixin/wxmenu/index'])?>"><i class="fa fa-file-text text-yellow"></i> 自定义菜单管理</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -358,7 +356,6 @@ AppAsset::register($this);
                                 <i class="fa fa-gears text-green"></i><span>高级功能</span> <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href=""><i class="fa fa-file-text text-yellow"></i> 自定义菜单管理</a></li>
                                 <li><a href=""><i class="fa fa-qrcode text-yellow"></i> 二维码管理</a></li>
                                 <li><a href=""><i class="fa fa-credit-card text-red"></i> 卡卷功能</a></li>
                                 <li><a href=""><i class="fa fa-user-plus text-aqua"></i> 多客服接入</a></li>
@@ -385,20 +382,224 @@ AppAsset::register($this);
                         </li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-weixin text-green"></i> <span>权限管理</span> <i class="fa fa-angle-left pull-right"></i>
+                        <ul class="treeview-menu">
+                            <li><a href="<?= Url::toRoute(['/auth/index'])?>"><i class="fa fa-search-plus text-aqua"></i> 管理员列表</a></li>
+                         </ul>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-weixin text-green"></i> <span>会员管理</span> <i class="fa fa-angle-left pull-right"></i>
+                        <ul class="treeview-menu">
+                            <li><a href="<?= Url::toRoute(['/user/index'])?>"><i class="fa fa-search-plus text-aqua"></i> 会员列表</a></li>
+                        </ul>
+                    </a>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
     <?= $content ?>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Allow mail redirect
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Other sets of options are available
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Expose author name in posts
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Allow the user to show his name in blog posts
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Show me as online
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Turn off notifications
+                            <input type="checkbox" class="pull-right">
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Delete chat history
+                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
 </div>
 <?php $this->endBody() ?>
 </body>
 
-<?php
-$this->registerJs('
-$.widget.bridge(\'uibutton\', $.ui.button);
-');
-?>
 </html>
 <?php $this->endPage() ?>

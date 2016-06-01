@@ -6,6 +6,12 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'adnKok6b1Y-ORvlhoVdqt3OlhnojGxn8',
         ],
+        'wechat' => [
+            'class' => 'callmez\wechat\sdk\Wechat',
+            'appId' => 'wxce8bdf437aaefbc6',
+            'appSecret' => '278da00d4b7a53e73e6fa928fc39409f',
+            'token' => 'weixin'
+        ],
     ],
 ];
 

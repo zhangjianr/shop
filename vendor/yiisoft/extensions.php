@@ -66,13 +66,31 @@ return array (
       '@mdm/admin' => $vendorDir . '/mdmsoft/yii2-admin',
     ),
   ),
+  'perminder-klair/yii2-dropzone' => 
+  array (
+    'name' => 'perminder-klair/yii2-dropzone',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kato' => $vendorDir . '/perminder-klair/yii2-dropzone',
+    ),
+  ),
   'cliff363825/yii2-kindeditor' => 
   array (
     'name' => 'cliff363825/yii2-kindeditor',
-    'version' => '1.0.4.0',
+    'version' => '1.0.5.0',
     'alias' => 
     array (
       '@cliff363825/kindeditor' => $vendorDir . '/cliff363825/yii2-kindeditor',
+    ),
+  ),
+  'callmez/yii2-wechat-sdk' => 
+  array (
+    'name' => 'callmez/yii2-wechat-sdk',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@callmez/wechat/sdk' => $vendorDir . '/callmez/yii2-wechat-sdk',
     ),
   ),
 );

@@ -56,6 +56,18 @@ class Admin extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => '用户名',
+            'email' => '邮箱',
+            'status' => '状态',
+            'created_at' => '创建时间',
+            'updated_at' => '上次登录时间',
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -113,7 +125,7 @@ class Admin extends ActiveRecord implements IdentityInterface
             return false;
         }
 
-        $timestamp = (int) substr($token, strrpos($token, '_') + 1);
+        $timestamp = (int)substr($token, strrpos($token, '_') + 1);
         $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }

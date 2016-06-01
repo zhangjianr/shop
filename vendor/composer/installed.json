@@ -104,39 +104,6 @@
         ]
     },
     {
-        "name": "bower-asset/jquery",
-        "version": "2.2.3",
-        "version_normalized": "2.2.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jquery/jquery-dist.git",
-            "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/af22a351b2ea5801ffb1695abb3bb34d5bed9198",
-            "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "dist/jquery.js",
-            "bower-asset-ignore": [
-                "package.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "keywords": [
-            "browser",
-            "javascript",
-            "jquery",
-            "library"
-        ]
-    },
-    {
         "name": "bower-asset/yii2-pjax",
         "version": "v2.0.6",
         "version_normalized": "2.0.6.0",
@@ -929,6 +896,83 @@
         ]
     },
     {
+        "name": "bower-asset/jquery",
+        "version": "2.2.4",
+        "version_normalized": "2.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-dist.git",
+            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "dist/jquery.js",
+            "bower-asset-ignore": [
+                "package.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "keywords": [
+            "browser",
+            "javascript",
+            "jquery",
+            "library"
+        ]
+    },
+    {
+        "name": "perminder-klair/yii2-dropzone",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/perminder-klair/yii2-dropzone.git",
+            "reference": "41e8145d940cc9955011138a9f16ad80e9831423"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/perminder-klair/yii2-dropzone/41e8145d940cc9955011138a9f16ad80e9831423.zip",
+            "reference": "41e8145d940cc9955011138a9f16ad80e9831423",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "2.0.*"
+        },
+        "time": "2015-11-09 11:28:44",
+        "type": "yii2-extension",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "kato\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Parminder Klair",
+                "email": "perminder.klair@gmail.com"
+            }
+        ],
+        "description": "DropzoneJs Extention for Yii2",
+        "keywords": [
+            "dropzone",
+            "extension",
+            "upload",
+            "yii2"
+        ]
+    },
+    {
         "name": "mdmsoft/yii2-admin",
         "version": "2.6",
         "version_normalized": "2.6.0.0",
@@ -990,23 +1034,23 @@
     },
     {
         "name": "cliff363825/yii2-kindeditor",
-        "version": "v1.0.4",
-        "version_normalized": "1.0.4.0",
+        "version": "v1.0.5",
+        "version_normalized": "1.0.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cliff363825/yii2-kindeditor.git",
-            "reference": "90bc5424c14c9242a49ba515dd7923b631ec7c39"
+            "reference": "2e4d3ad5406fbb74f20f9f7a41015b95126a970c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/cliff363825/yii2-kindeditor/90bc5424c14c9242a49ba515dd7923b631ec7c39.zip",
-            "reference": "90bc5424c14c9242a49ba515dd7923b631ec7c39",
+            "url": "https://packagist.phpcomposer.com/files/cliff363825/yii2-kindeditor/2e4d3ad5406fbb74f20f9f7a41015b95126a970c.zip",
+            "reference": "2e4d3ad5406fbb74f20f9f7a41015b95126a970c",
             "shasum": ""
         },
         "require": {
             "yiisoft/yii2": "*"
         },
-        "time": "2015-08-24 18:52:37",
+        "time": "2016-05-29 10:21:01",
         "type": "yii2-extension",
         "installation-source": "dist",
         "autoload": {
@@ -1027,6 +1071,50 @@
         "description": "KindEditor Widget for Yii2",
         "keywords": [
             "kindeditor",
+            "yii2"
+        ]
+    },
+    {
+        "name": "callmez/yii2-wechat-sdk",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/callmez/yii2-wechat-sdk.git",
+            "reference": "ba29d3d285840daa114fb81b8f8c4dc8848bdce5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://packagist.phpcomposer.com/files/callmez/yii2-wechat-sdk/ba29d3d285840daa114fb81b8f8c4dc8848bdce5.zip",
+            "reference": "ba29d3d285840daa114fb81b8f8c4dc8848bdce5",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "time": "2016-02-29 13:43:59",
+        "type": "yii2-extension",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "callmez\\wechat\\sdk\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "CallMeZ",
+                "email": "callme-z@qq.com"
+            }
+        ],
+        "description": "The wechat api for the Yii framework",
+        "keywords": [
+            "sdk",
+            "wechat",
+            "weixin",
             "yii2"
         ]
     }
