@@ -57,8 +57,9 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        //echo 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='. Yii::$app->params['appid'] .'&redirect_uri=127.0.0.1/oauth.php&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect';exit;
-
+        if($_GET){
+            print_r($_GET);
+        }
         return $this->render('index');
     }
 

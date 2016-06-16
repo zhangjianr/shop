@@ -24,13 +24,13 @@ class ShorturlController extends Controller
 
     public function urlqrcode($url)
     {
-        //$shorturl = self::shorturl($url);
-        return QrCode::jpg($url);
+        $shorturl = self::shorturl($url);
+        return QrCode::jpg($shorturl);
     }
 
     public function authorizationurl($url)
     {
-        $authorizationurl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.Yii::$app->params['appid'].'&redirect_uri=127.0.0.1/oauth.php&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect';
+        $authorizationurl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='.Yii::$app->params['appid'].'&redirect_uri='. urlencode($url).'&response_type=code&scope=snsapi_userinfo&state=#wechat_redirect';
         return self::urlqrcode($authorizationurl);
     }
 

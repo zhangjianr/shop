@@ -4,7 +4,7 @@
 
 $this->title = '后台';
 ?>
-<img src="<?= \yii\helpers\Url::to(['site/qrcode','url'=>'http://7ac53ba4.ngrok.io/index.php?r=site%2Findex'])?>" />
+<img src="<?= \yii\helpers\Url::to(['site/qrcode','url'=>'http://wqwx.phpwk.com/index.php?r=site%2Findex'])?>" />
 <div class="row">
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
