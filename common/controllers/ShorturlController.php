@@ -34,4 +34,10 @@ class ShorturlController extends Controller
         return self::urlqrcode($authorizationurl);
     }
 
+    public function accesstoken($code)
+    {
+        $url ='https://api.weixin.qq.com/sns/oauth2/access_token?appid='. Yii::$app->params['appid'] .'&secret='. Yii::$app->params['secret'] .'&code='. $code .'&grant_type=authorization_code';
+        return Wechat::getHttpscurl($url);
+    }
+
 }

@@ -58,7 +58,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
         if($_GET){
-            print_r($_GET);
+            $result = ShorturlController::accesstoken($_GET['code']);
+            echo '<pre>';
+            print_r($result);
         }
         return $this->render('index');
     }
