@@ -27,4 +27,19 @@ return [
 
     //微信长链接转短连接
     'shortUrlpath' => 'https://api.weixin.qq.com/cgi-bin/shorturl?access_token=',
+
+    //微信授权网页获取code
+    'codepath' => 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=',
+    
+    //获取微信授权网页 Accesstoken
+    'webaccesstokenpath' => 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=',
+
+    //刷新微信授权网页 Accesstoken
+    'refreshtokenpath' => 'https://api.weixin.qq.com/sns/oauth2/refresh_token?appid=',
+    
+    //判断网页access_token 是否有效
+    'ifaccesstokenpath' => 'https://api.weixin.qq.com/sns/auth?access_token=',
+    
+    //微信授权网页获取用户基本信息
+    'webuserpath' => 'https://api.weixin.qq.com/sns/userinfo?access_token=',
 ];
