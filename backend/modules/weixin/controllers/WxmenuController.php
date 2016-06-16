@@ -5,7 +5,7 @@ namespace backend\modules\weixin\controllers;
 use backend\models\Wxreply;
 use Yii;
 use backend\models\Wxmenu;
-use backend\models\search\WxmenuSearch;
+use backend\models\searchs\WxmenuSearch;
 use common\core\backend\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,24 +37,25 @@ class WxmenuController extends BackendController
      */
     public function actionIndex()
     {
-        $searchModel = new WxmenuSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = Wxmenu::find()->asArray()->orderBy('sort')->all();
+        $result = $arr = [];
+            foreach ($data as $v){
+                if($v['pid'] == 0){
+                    $arr[] = $v;
+                }
+            }
 
-        $query = Wxmenu::find();
-        $pagination = new Pagination([
-            'defaultPageSize' => 10,
-            'totalCount' => $query->count()
-        ]);
+                foreach ($arr as $val){
+                    $result[] = $val;
+                    foreach ($data as $v){
+                        if($val['id'] == $v['pid']){
+                            $result[] = $v;
+                        }
+                    }
+                }
 
-        $data = $query->limit($pagination->limit)
-            ->offset($pagination->offset)
-            ->orderBy('superior')
-            ->all();
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            'data' 		   => $data ,		//当前页数据
-            'pagination'   => $pagination  //分页对象
+            'data' => $result ,		//当前页数据
         ]);
     }
 
@@ -80,10 +81,10 @@ class WxmenuController extends BackendController
         $model = new Wxmenu();
         $num = 0;
         $enum = 0;
-        if(Yii::$app->request->post('Wxmenu')['superior'] == 0 && isset(Yii::$app->request->post('Wxmenu')['superior'])){
-            $num = $model->find()->where(['superior' => 0])->count();
+        if(Yii::$app->request->post('Wxmenu')['pid'] == 0 && isset(Yii::$app->request->post('Wxmenu')['pid'])){
+            $num = $model->find()->where(['pid' => 0])->count();
         }else{
-            $enum = $model->find()->where(['superior' => Yii::$app->request->post('Wxmenu')['superior']])->count();
+            $enum = $model->find()->where(['pid' => Yii::$app->request->post('Wxmenu')['pid']])->count();
         }
 
         //判断一级菜单不能超过3个
@@ -97,7 +98,9 @@ class WxmenuController extends BackendController
             return $this->render('create', [
                 'model' => $model,
             ]);
-        }elseif ($model->load(Yii::$app->request->post()) && $model->save()) {
+        }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('menuid',$model->id);
             return $this->redirect(['/weixin/wxmenu/index']);
         } else {
@@ -119,10 +122,10 @@ class WxmenuController extends BackendController
         $model = $this->findModel($id);
         $num = 0;
         $enum = 0;
-        if(Yii::$app->request->post('Wxmenu')['superior'] == 0 && isset(Yii::$app->request->post('Wxmenu')['superior'])){
-            $num = $Wxmenu->find()->where(['superior' => 0])->count();
+        if(Yii::$app->request->post('Wxmenu')['pid'] == 0 && isset(Yii::$app->request->post('Wxmenu')['pid'])){
+            $num = $Wxmenu->find()->where(['pid' => 0])->count();
         }else{
-            $enum = $Wxmenu->find()->where(['superior' => Yii::$app->request->post('Wxmenu')['superior']])->count();
+            $enum = $Wxmenu->find()->where(['pid' => Yii::$app->request->post('Wxmenu')['pid']])->count();
         }
         if($num > 3){
             Yii::$app->session->setFlash('yijinum',1);
@@ -135,7 +138,6 @@ class WxmenuController extends BackendController
                 'model' => $model,
             ]);
         }
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('menuupid',$model->id);
             return $this->redirect(['/weixin/wxmenu/index']);

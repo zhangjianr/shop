@@ -16,7 +16,6 @@ class LoginAsset extends AssetBundle
         'plugins/iCheck/square/blue.css',
     ];
     public $js = [
-        // 'bootstrap/js/bootstrap.min.js',
         'plugins/iCheck/icheck.min.js',
     ];
     public $depends = [

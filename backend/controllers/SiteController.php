@@ -1,17 +1,18 @@
 <?php
 namespace backend\controllers;
 
-
 use Yii;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use backend\models\forms\LoginForm;
-use common\core\backend\BackendController;
+use common\controllers\ShorturlController;
+
 
 /**
  * Site controller
  */
-class SiteController extends BackendController
+class SiteController extends Controller
 {
     /**
      * @inheritdoc
@@ -27,7 +28,7 @@ class SiteController extends BackendController
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'general'],
+                        'actions' => ['logout', 'qrcode','index', 'general'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -56,14 +57,20 @@ class SiteController extends BackendController
 
     public function actionIndex()
     {
+        //echo 'https://open.weixin.qq.com/connect/oauth2/authorize?appid='. Yii::$app->params['appid'] .'&redirect_uri=127.0.0.1/oauth.php&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect';exit;
+
         return $this->render('index');
     }
 
-    
+    public function actionQrcode($url)
+    {
+        $qrcode = ShorturlController::authorizationurl($url);
+        return $qrcode;
+    }
 
     public function actionLogin()
     {
-            $this->layout = 'login';
+        $this->layout = 'login';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }

@@ -22,7 +22,8 @@
         "cliff363825/yii2-kindeditor": "*",
         "perminder-klair/yii2-dropzone": "dev-master",
         "xj/yii2-oauth": "~1.0",
-        "callmez/yii2-wechat-sdk": "dev-master"
+        "callmez/yii2-wechat-sdk": "dev-master",
+        "2amigos/yii2-qrcode-helper" : "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

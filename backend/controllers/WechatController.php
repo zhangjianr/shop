@@ -1,4 +1,5 @@
 <?php
+//废弃页面
 namespace backend\controllers;
 
 use Yii;

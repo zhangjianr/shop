@@ -15,12 +15,18 @@ return [
         'weixin' => [
             'class' => 'backend\modules\weixin\Module',
         ],
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu',
+            'mainLayout' => '@backend/views/layouts/main.php',
+        ]
     ],
     'components' => [
         'user' => [
             'identityClass' => 'backend\models\Admin',
             'enableAutoLogin' => true,
         ],
+        
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

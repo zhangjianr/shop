@@ -2,10 +2,16 @@
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use backend\models\Oauth;
+use backend\models\Person;
+use backend\models\Feedback;
+use backend\models\Integral;
+use yii\web\IdentityInterface;
+use backend\models\IntegralOrder;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
+
 
 /**
  * User model
@@ -26,7 +32,8 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
-
+    const DELETE_TRUE = 10;
+    const DELETE_FALSE = 0;
     /**
      * @inheritdoc
      */
@@ -45,6 +52,30 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public function getOauth()
+    {
+        return $this->hasOne(Oauth::className(), ['uid' => 'id']);
+    }
+
+    public function getPerson()
+    {
+        return $this->hasOne(Person::className(), ['uid' => 'id']);
+    }
+
+    public function getFeedback()
+    {
+        return $this->hasMany(Feedback::className(), ['uid' => 'id']);
+    }
+
+    public function getIntegral()
+    {
+        return $this->hasMany(Integral::className(), ['uid' => 'id']);
+    }
+
+    public function getIorder()
+    {
+        return $this->hasMany(IntegralOrder::className(), ['uid' => 'id']);
+    }
     /**
      * @inheritdoc
      */
@@ -63,8 +94,9 @@ class User extends ActiveRecord implements IdentityInterface
             'username' => '用户名',
             'email' => '邮箱',
             'status' => '状态',
-            'created_at' => '创建时间',
+            'created_at' => '注册时间',
             'updated_at' => '上次登录时间',
+            'mobile' => '手机号',
         ];
     }
 

@@ -4,7 +4,7 @@ namespace backend\modules\weixin\controllers;
 
 use Yii;
 use backend\models\Keyword;
-use backend\models\search\KeywordSearch;
+use backend\models\searchs\KeywordSearch;
 use common\core\backend\BackendController;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
@@ -36,9 +36,6 @@ class KeywordController extends BackendController
      */
     public function actionIndex()
     {
-        $searchModel = new KeywordSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         //调用模型
         $query = Keyword::find();
         $pagination = new Pagination([
@@ -50,8 +47,6 @@ class KeywordController extends BackendController
             ->all();
 
         return $this->render('index', [
-            'searchModel'  => $searchModel,
-            'dataProvider' => $dataProvider,
             'data' 		   => $data ,		//当前页数据
             'pagination'   => $pagination  //分页对象
         ]);
@@ -81,7 +76,6 @@ class KeywordController extends BackendController
             Yii::$app->session->setFlash('keycreateid',$model->id);
             return $this->redirect(['/weixin/keyword/index']);
         } else {
-            $model->status = 1;
             return $this->render('create', [
                 'model' => $model,
             ]);

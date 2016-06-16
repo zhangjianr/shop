@@ -1,11 +1,44 @@
 <?php
 namespace common\core\backend;
 
-
+use Yii;
 use yii\web\Controller;
+use yii\helpers\Url;
 
 class BackendController extends Controller
 {
+
+    /**
+     * @param \yii\base\Action $actoin
+     * @return bool
+     * @author wuqi
+     * @throws \yii\web\BadRequestHttpException
+     */
+    public function beforeAction($actoin)
+    {
+        $contro = Yii::$app->controller;
+        //$module = $contro->module->id;
+        $action = $contro->action->id;
+        $controller = $contro->id;
+        $route = "/$controller/$action";
+//        if (Yii::$app->user->id == 1 || $this->ignoreAction($route)) {
+//            return parent::beforeAction($actoin);
+//        } else if (!Yii::$app->user->can($route) && Yii::$app->user->id != 1) {
+//            Yii::$app->session->setFlash('message', "您还没有当前操作权限");
+//            $this->goHome();
+//        } else {
+        if (Yii::$app->user->isGuest) {
+            $this->redirect(Url::toRoute('/site/login'));
+        } else {
+            return parent::beforeAction($actoin);
+        }
+ //       }
+    }
+
+
+
+
+
     public static function truncate_utf8_string($string, $length, $etc = '...')
     {
         $result = '';

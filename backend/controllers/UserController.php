@@ -110,9 +110,15 @@ class UserController extends BackendController
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        if (Yii::$app->request->isAjax) {
+            $id = Yii::$app->request->post('id');
+            $res = Yii::$app->db->createCommand()->update(User::tableName(),
+                ['is_del' => User::DELETE_TRUE],
+                ['id' => $id]
+            )->execute();
+            Yii::$app->response->format = 'json';
+            return $res ? ['status' => 1] : ['status' => 0];
+        }
     }
 
     /**

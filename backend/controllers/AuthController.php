@@ -208,4 +208,14 @@ class AuthController extends BackendController
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
+    /** 操作日志列表
+     * @return string
+     * @author wuqi
+     */
+    public function actionList()
+    {
+        return $this->render('list');
+    }
 }

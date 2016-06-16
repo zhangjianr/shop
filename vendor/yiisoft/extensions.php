@@ -84,6 +84,24 @@ return array (
       '@cliff363825/kindeditor' => $vendorDir . '/cliff363825/yii2-kindeditor',
     ),
   ),
+  'yiisoft/yii2-authclient' => 
+  array (
+    'name' => 'yiisoft/yii2-authclient',
+    'version' => '2.0.5.0',
+    'alias' => 
+    array (
+      '@yii/authclient' => $vendorDir . '/yiisoft/yii2-authclient',
+    ),
+  ),
+  '2amigos/yii2-qrcode-helper' => 
+  array (
+    'name' => '2amigos/yii2-qrcode-helper',
+    'version' => '1.0.2.0',
+    'alias' => 
+    array (
+      '@dosamigos/qrcode' => $vendorDir . '/2amigos/yii2-qrcode-helper/src',
+    ),
+  ),
   'callmez/yii2-wechat-sdk' => 
   array (
     'name' => 'callmez/yii2-wechat-sdk',

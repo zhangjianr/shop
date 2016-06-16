@@ -1,4 +1,5 @@
 <?php
+//废弃页面  微信测试
 namespace backend\controllers;
 
 use Yii;

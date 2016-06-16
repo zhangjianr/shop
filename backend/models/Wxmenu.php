@@ -33,9 +33,10 @@ class Wxmenu extends \common\core\backend\BackendActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['kid', 'sort', 'superior'], 'integer'],
+            [['sort','pid'], 'integer'],
             [['name', 'type'], 'string', 'max' => 45],
-            [['url'], 'string', 'max' => 100],
+            [['url','keyword'], 'string', 'max' => 100],
+            [['sort'], 'default', 'value'=>0],
         ];
     }
 
@@ -48,11 +49,11 @@ class Wxmenu extends \common\core\backend\BackendActiveRecord
             'id' => 'ID',
             'name' => '菜单标题',
             'type' => '类型',
-            'kid' => '点击推送的关键词',
+            'keyword' => '关键词',
             'status' => 'Status',
             'sort' => '排序',
             'url' => '跳转链接',
-            'superior' => '一级菜单',
+            'pid' => '一级菜单',
         ];
     }
 }

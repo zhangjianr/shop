@@ -9,11 +9,15 @@ use yii\helpers\Html;
 $this->params['breadcrumbs'][] = ['label' => 'Keywords', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="keyword-create">
-
-
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header"></div>
+            <div class="box-body">
+                <?= $this->render('_form', [
+                    'model' => $model,
+                ]) ?>
+            </div>
+        </div>
+    </div>
 </div>

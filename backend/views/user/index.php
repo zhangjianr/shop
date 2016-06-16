@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-
+use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\searchs\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -11,78 +11,94 @@ $this->title = '会员列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?= Html::encode($this->title) ?>
-            <small></small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li class="active"><?= Html::encode($this->title) ?></li>
-        </ol>
-    </section>
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header"></div>
-                    <div class="box-body">
-                        <?= GridView::widget([
-                            'dataProvider' => $dataProvider,
-                            'filterModel' => $searchModel,
-                            'columns' => [
-                               // ['class' => 'yii\grid\SerialColumn'],
-                                'id',
-                                'username',
-                                'email:email',
-                                [
-                                    'attribute' => 'status',
-                                    'value' => function ($model) {
-                                        return $model->status == 10 ? '活跃' : '锁定'; // 如果是数组数据则为 $data['name'] ，例如，使用 SqlDataProvider 的情形。
-                                    },
-                                ],
-                                [
-                                    'attribute' => 'created_at',
-                                    'filter' => false, //不显示搜索框
-                                    'format' => ['date', 'php:Y-m-d H:i:s'],
-                                ],
-                                [
-                                    'attribute' => 'updated_at',
-                                    'filter' => false, //不显示搜索框
-                                    'format' => ['date', 'php:Y-m-d H:i:s'],
-                                ],
 
-                                [
-                                    'class' => 'yii\grid\ActionColumn',
-                                    'header' => '操作',
-                                    'headerOptions' => ['width' => '150px'],
-                                    'template' => '{view}{lock}',
-                                    'buttons' => [
-                                        'view' => function ($url) {
-                                            return Html::a("查看", $url, ['target' => '_blank', 'class' => 'btn btn-primary']);
-                                        },
-                                        'lock' => function ($url, $model, $key) {
-                                            return Html::a($model['status'] == 10 ? '锁定' : '解锁', '', ['class' => 'btn btn-info lock_user', 'data-id' => $key]);
-                                        },
-                                    ],
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <?= $this->render('_search', [
+                        'model' => $searchModel,
+                    ]) ?>
+                </div>
+                <div class="box-body">
+                    <?php Pjax::begin(['id' => 'user-reload']) ?>
+                    <?= GridView::widget([
+                        'dataProvider' => $dataProvider,
+                        'columns' => [
+                            // ['class' => 'yii\grid\SerialColumn'],
+                            'id',
+                            'mobile',
+                            'person.name',
+                            'person.integral',
+                            [
+                                'attribute' => 'created_at',
+                                'format' => ['date', 'php:Y-m-d H:i:s'],
+                            ],
+                            [
+                                'attribute' => 'openid',
+                                'label' => '注册类型',
+                                'value' => function ($model) {
+                                    return $model->openid ? '微信' : '手机';
+                                }
+                            ],
+                            [
+                                'attribute' => 'status',
+                                'value' => function ($model) {
+                                    return $model->status == 10 ? '可用' : '不可用'; // 如果是数组数据则为 $data['name'] ，例如，使用 SqlDataProvider 的情形。
+                                },
+                            ],
+                            [
+                                'class' => 'yii\grid\ActionColumn',
+                                'header' => '操作',
+                                // 'headerOptions' => ['width' => '150px'],
+                                'template' => '{view} | {delete} | {lock}',
+                                'buttons' => [
+                                    'view' => function ($url) {
+                                        return Html::a("查看", $url, ['target' => '_blank']);
+                                    },
+                                    'delete' => function ($url, $model, $key) {
+                                        return Html::a("删除", '#', ['onclick' => '
+                                        layer.confirm("您确定删除吗?", {
+                                            btn: ["确定", "取消"]
+                                        }, function(){
+                                            $.ajax({
+                                                type: "post",
+                                                url: "' . $url . '",
+                                                data: {id : " ' . $key . '"},
+                                                dataType: "json",
+                                                success: function (data) {
+                                                    if (data.status) {
+                                                        layer.msg("操作成功", {icon: 1});
+                                                        $.pjax.reload({container:"#user-reload"});
+                                                    } else {
+                                                        layer.msg("操作失败", {icon: 2});
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    ']);
+                                    },
+                                    'lock' => function ($url, $model, $key) {
+                                        return Html::a($model['status'] == 10 ? '锁定' : '解锁', '', ['class' => 'lock_user', 'data-id' => $key]);
+                                    },
+
                                 ],
                             ],
-                        ]); ?>
-                    </div>
+                        ],
+                    ]); ?>
+                    <?php Pjax::end() ?>
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+
 
 <?php
 use  yii\helpers\Url;
+
 $csrf = Yii::$app->request->csrfToken;
 $url = Url::toRoute('/user/status');
-$js = <<<JS
+$js = <<<SCRIPT
     $(".lock_user").on('click', function (e) {
             e.preventDefault();
             var currntVal = $(this).html();
@@ -96,7 +112,7 @@ $js = <<<JS
                 $.ajax({
                     type: 'post',
                     url: "$url",
-                    data: {uid : uid, isLock : isLock, model : 'common\\\models\\\User', _csrf : "$csrf"},
+                    data: {id : uid, status : isLock, model : 'common\\\models\\\User', _csrf : "$csrf"},
                     dataType: 'json',
                     success: function (data) {
                         if (data.status) {
@@ -111,7 +127,8 @@ $js = <<<JS
                 });
             });
         });
-JS;
+        menuheight('user-index');
+SCRIPT;
 
 
 $this->registerJs($js);

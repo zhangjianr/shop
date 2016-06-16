@@ -1,0 +1,2008 @@
+2016-06-06 05:59:17 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "reply/index".' in /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('reply/index', Array)
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-06-06 05:59:16 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'reply/index'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=reply%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=reply%2Findex'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '55858'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465192756.5933
+    'REQUEST_TIME' => 1465192756
+]
+2016-06-06 07:07:01 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(95): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionLogin()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:07:01 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58178'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196821.435
+    'REQUEST_TIME' => 1465196821
+]
+2016-06-06 07:07:09 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(95): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionLogin()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:07:08 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58180'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196828.4583
+    'REQUEST_TIME' => 1465196828
+]
+2016-06-06 07:08:57 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /var/www/html/shop/frontend/views/layouts/login.php' in /var/www/html/shop/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\SiteController))
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#2 /var/www/html/shop/frontend/controllers/SiteController.php(96): yii\base\Controller->render('login', Array)
+#3 [internal function]: frontend\controllers\SiteController->actionLogin()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2016-06-06 07:08:57 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58188'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196937.0133
+    'REQUEST_TIME' => 1465196937
+]
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/adminlte/css/AdminLTE.min.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/adminlte/css/AdminLTE.min.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/adminlte/css/AdminLTE.min.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58200'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196969.5415
+    'REQUEST_TIME' => 1465196969
+]
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/square/blue.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/square/blue.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/square/blue.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58202'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196969.5458
+    'REQUEST_TIME' => 1465196969
+]
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/bootstrap/js/bootstrap.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/bootstrap/js/bootstrap.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/bootstrap/js/bootstrap.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58206'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196969.5648
+    'REQUEST_TIME' => 1465196969
+]
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:09:29 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/icheck.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/icheck.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/icheck.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58210'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465196969.5413
+    'REQUEST_TIME' => 1465196969
+]
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/adminlte/css/AdminLTE.min.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/adminlte/css/AdminLTE.min.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/adminlte/css/AdminLTE.min.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58236'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197106.3619
+    'REQUEST_TIME' => 1465197106
+]
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/bootstrap/js/bootstrap.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/bootstrap/js/bootstrap.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/bootstrap/js/bootstrap.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58242'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197106.3747
+    'REQUEST_TIME' => 1465197106
+]
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/square/blue.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/square/blue.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/square/blue.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58238'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197106.3745
+    'REQUEST_TIME' => 1465197106
+]
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:11:46 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/icheck.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/icheck.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/icheck.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58244'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197106.4021
+    'REQUEST_TIME' => 1465197106
+]
+2016-06-06 07:12:00 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:00 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/adminlte/css/AdminLTE.min.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/adminlte/css/AdminLTE.min.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/adminlte/css/AdminLTE.min.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58250'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197120.6011
+    'REQUEST_TIME' => 1465197120
+]
+2016-06-06 07:12:00 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:00 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/square/blue.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/square/blue.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/square/blue.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58252'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197120.6033
+    'REQUEST_TIME' => 1465197120
+]
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/adminlte/css/AdminLTE.min.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/adminlte/css/AdminLTE.min.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/adminlte/css/AdminLTE.min.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58254'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197122.8088
+    'REQUEST_TIME' => 1465197122
+]
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/square/blue.css'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/square/blue.css'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/square/blue.css'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58256'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197122.8094
+    'REQUEST_TIME' => 1465197122
+]
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/bootstrap/js/bootstrap.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/bootstrap/js/bootstrap.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/bootstrap/js/bootstrap.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58258'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197122.815
+    'REQUEST_TIME' => 1465197122
+]
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:12:02 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/plugins/iCheck/icheck.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/plugins/iCheck/icheck.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/plugins/iCheck/icheck.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58262'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197122.8563
+    'REQUEST_TIME' => 1465197122
+]
+2016-06-06 07:13:59 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:13:59 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/bootstrap/js/bootstrap.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/bootstrap/js/bootstrap.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/bootstrap/js/bootstrap.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58302'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197239.6446
+    'REQUEST_TIME' => 1465197239
+]
+2016-06-06 07:17:56 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\assets\LoginAsset' not found' in /var/www/html/shop/frontend/views/layouts/login.php:13
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(96): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionLogin()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:17:56 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58354'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197476.8897
+    'REQUEST_TIME' => 1465197476
+]
+2016-06-06 07:18:10 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'frontend\assets\LoginAsset' in file: /var/www/html/shop/frontend/assets/LoginAsset.php. Namespace missing?' in /var/www/html/shop/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\assets...')
+#1 /var/www/html/shop/frontend/views/layouts/login.php(13): spl_autoload_call('frontend\\assets...')
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\SiteController))
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('\n    <body clas...')
+#6 /var/www/html/shop/frontend/controllers/SiteController.php(96): yii\base\Controller->render('login', Array)
+#7 [internal function]: frontend\controllers\SiteController->actionLogin()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('login', Array)
+#11 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/login', Array)
+#12 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#14 {main}
+2016-06-06 07:18:10 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58356'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197490.3359
+    'REQUEST_TIME' => 1465197490
+]
+2016-06-06 07:18:25 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 07:18:25 [127.0.0.1][-][81f6p79tpt10gdorj2b3flt8t6][info][application] $_GET = [
+    's' => '/bootstrap/js/bootstrap.min.js'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '81f6p79tpt10gdorj2b3flt8t6'
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 's=/bootstrap/js/bootstrap.min.js'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/bootstrap/js/bootstrap.min.js'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '58364'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=81f6p79tpt10gdorj2b3flt8t6; _csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465197505.9076
+    'REQUEST_TIME' => 1465197505
+]
+2016-06-06 07:34:09 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/uppass' in /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('uppass', Array)
+#1 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/uppass', Array)
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-06-06 07:34:09 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'site/uppass'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Fuppass'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Fuppass'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59508'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=person%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465198449.2768
+    'REQUEST_TIME' => 1465198449
+]
+2016-06-06 07:40:41 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /var/www/html/shop/frontend/controllers/PersonController.php:121
+Stack trace:
+#0 /var/www/html/shop/frontend/controllers/PersonController.php(85): frontend\controllers\PersonController->findModel(Array)
+#1 [internal function]: frontend\controllers\PersonController->actionUpdate('1')
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('update', Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('person/update', Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-06 07:40:41 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'person/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fupdate&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fupdate&id=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59656'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=person%2Fview&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465198841.4666
+    'REQUEST_TIME' => 1465198841
+]
+2016-06-06 07:40:46 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /var/www/html/shop/frontend/controllers/PersonController.php:121
+Stack trace:
+#0 /var/www/html/shop/frontend/controllers/PersonController.php(85): frontend\controllers\PersonController->findModel(Array)
+#1 [internal function]: frontend\controllers\PersonController->actionUpdate('1')
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('update', Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('person/update', Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-06 07:40:46 [127.0.0.1][1][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'person/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fupdate&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fupdate&id=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '59668'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.shop.com/index.php?r=person%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465198846.151
+    'REQUEST_TIME' => 1465198846
+]
+2016-06-06 07:55:15 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\widgets\ActiveField::inline()' in /var/www/html/shop/vendor/yiisoft/yii2/base/Component.php:285
+Stack trace:
+#0 /var/www/html/shop/frontend/views/person/_form.php(18): yii\base\Component->__call('inline', Array)
+#1 /var/www/html/shop/frontend/views/person/_form.php(18): yii\widgets\ActiveField->inline()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/html/s...', Array, NULL)
+#5 /var/www/html/shop/frontend/views/person/update.php(19): yii\base\View->render('_form', Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(325): require('/var/www/html/s...')
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/var/www/html/s...', Array)
+#8 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/var/www/html/s...', Array, Object(frontend\controllers\PersonController))
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('update', Array, Object(frontend\controllers\PersonController))
+#10 /var/www/html/shop/frontend/controllers/PersonController.php(92): yii\base\Controller->render('update', Array)
+#11 [internal function]: frontend\controllers\PersonController->actionUpdate('1')
+#12 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('update', Array)
+#15 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('person/update', Array)
+#16 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#18 {main}
+2016-06-06 07:55:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'person/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fupdate&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fupdate&id=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '60024'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465199715.6574
+    'REQUEST_TIME' => 1465199715
+]
+2016-06-06 08:39:06 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /var/www/html/shop/frontend/controllers/PersonController.php:122
+Stack trace:
+#0 /var/www/html/shop/frontend/controllers/PersonController.php(86): frontend\controllers\PersonController->findModel(Array)
+#1 [internal function]: frontend\controllers\PersonController->actionUpdate('1')
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('update', Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('person/update', Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-06 08:39:06 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'person/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fupdate&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fupdate&id=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '32874'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465202346.0776
+    'REQUEST_TIME' => 1465202346
+]
+2016-06-06 08:39:23 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/PersonController.php(74): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\PersonController->actionCreate()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 08:39:23 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'person/create'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fcreate'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '32886'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465202363.8359
+    'REQUEST_TIME' => 1465202363
+]
+2016-06-06 08:39:35 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /var/www/html/shop/frontend/controllers/PersonController.php:122
+Stack trace:
+#0 /var/www/html/shop/frontend/controllers/PersonController.php(86): frontend\controllers\PersonController->findModel(Array)
+#1 [internal function]: frontend\controllers\PersonController->actionUpdate('1')
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('update', Array)
+#5 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('person/update', Array)
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-06-06 08:39:35 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'person/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=person%2Fupdate&id=1'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=person%2Fupdate&id=1'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '32896'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465202375.6228
+    'REQUEST_TIME' => 1465202375
+]
+2016-06-06 08:39:47 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 08:39:47 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '32916'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465202387.8475
+    'REQUEST_TIME' => 1465202387
+]
+2016-06-06 09:36:36 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 09:36:35 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34678'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465205795.8389
+    'REQUEST_TIME' => 1465205795
+]
+2016-06-06 09:36:45 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Trying to get property of non-object' in /var/www/html/shop/frontend/views/layouts/main.php:247
+Stack trace:
+#0 /var/www/html/shop/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile()
+#1 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile()
+#2 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent()
+#3 /var/www/html/shop/frontend/controllers/SiteController.php(75): yii\base\Controller->render()
+#4 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): frontend\controllers\SiteController->actionIndex()
+#5 /var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php(55): ::call_user_func_array:{/var/www/html/shop/vendor/yiisoft/yii2/base/InlineAction.php:55}()
+#6 /var/www/html/shop/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/shop/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction()
+#8 /var/www/html/shop/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction()
+#9 /var/www/html/shop/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest()
+#10 /var/www/html/shop/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-06-06 09:36:45 [127.0.0.1][-][hsdnpbu24662jgi7ejeknhatf3][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"nSHjTeNP_u-lF71t3dUK0As2oztHBhzq\";}'
+    'PHPSESSID' => 'hsdnpbu24662jgi7ejeknhatf3'
+    '_identity' => 'b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'FCGI_ROLE' => 'RESPONDER'
+    'SCRIPT_FILENAME' => '/var/www/html/shop/frontend/web/index.php'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'CONTENT_TYPE' => ''
+    'CONTENT_LENGTH' => ''
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=site%2Findex'
+    'DOCUMENT_URI' => '/index.php'
+    'DOCUMENT_ROOT' => '/var/www/html/shop/frontend/web'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_SOFTWARE' => 'nginx/1.9.3'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34680'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_NAME' => 'www.shop.com'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'www.shop.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/48.0.2564.82 Chrome/48.0.2564.82 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=8e5cd31143d47664606a06039b5993463af5e88551ab3b0b6368fa786f922cffa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22nSHjTeNP_u-lF71t3dUK0As2oztHBhzq%22%3B%7D; PHPSESSID=hsdnpbu24662jgi7ejeknhatf3; _identity=b85f221a9836954855f1504685e97e226952ea0abfb60785621ef0cd850a4708a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22IuQ5OBdh0pI74EjuMP-iAc1ghOE_c2Oy%22%2C2592000%5D%22%3B%7D'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465205805.081
+    'REQUEST_TIME' => 1465205805
+]

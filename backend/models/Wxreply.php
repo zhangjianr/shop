@@ -31,12 +31,10 @@ class Wxreply extends \common\core\backend\BackendActiveRecord
     public function rules()
     {
         return [
-            [['kid', 'title', 'description', 'picurl', 'url'], 'required'],
-            [['kid', 'sort'], 'integer','max'=>99],
-//            [['kid'], 'replynum'],
-            [['title'], 'string', 'max' => 100],
+            [['keyword', 'title', 'description', 'image_id', 'url'], 'required'],
+            [['title','keyword'], 'string', 'max' => 100],
             [['url'],'url'],
-            [['description', 'picurl', 'url'], 'string', 'max' => 255],
+            [['url'], 'string', 'max' => 255],
         ];
     }
 
@@ -59,12 +57,21 @@ class Wxreply extends \common\core\backend\BackendActiveRecord
     {
         return [
             'id' => 'ID',
-            'kid' => '关键词',
+            'keyword' => '关键词',
             'title' => '标题',
             'description' => '简介',
-            'picurl' => '图片',
+            'image_id' => '图片',
             'url' => '连接地址',
-            'sort' => '排序',
         ];
+    }
+
+    /**
+     * @author zhangjian
+     * 
+     */
+    public function keyname($result)
+    {
+        $data = explode(',', $result);
+        return Wxreply::find()->where(['in', 'id', $data])->all();
     }
 }

@@ -10,81 +10,65 @@ use yii\grid\GridView;
 $this->title = '管理员列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            <?= Html::encode($this->title) ?>
-            <small></small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <li class="active"><?= Html::encode($this->title) ?></li>
-        </ol>
-    </section>
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title"><?= Html::a('创建', ['create'], ['class' => 'btn btn-success']) ?></h3>
-                    </div>
-                    <div class="box-body">
-
-                        <?= GridView::widget([
-                            'dataProvider' => $dataProvider,
-                            'filterModel' => $searchModel,
-                            'columns' => [
-                                //['class' => 'yii\grid\SerialColumn'],
-                                'id',
-                                'username',
-                                'email:email',
-                                [
-                                    'attribute' => 'status',
-                                    'value' => function ($model) {
-                                        return $model->status == 10 ? '活跃' : '锁定'; // 如果是数组数据则为 $data['name'] ，例如，使用 SqlDataProvider 的情形。
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><?= Html::a('创建', ['create'], ['class' => 'btn btn-success']) ?></h3>
+                    <?= $this->render('_search', [
+                        'model' => $searchModel,
+                    ]) ?>
+                </div>
+                <div class="box-body">
+                    <?= GridView::widget([
+                        'dataProvider' => $dataProvider,
+                        'columns' => [
+                            //['class' => 'yii\grid\SerialColumn'],
+                            'id',
+                            'username',
+                            'email:email',
+                            [
+                                'attribute' => 'status',
+                                'value' => function ($model) {
+                                    return $model->status == 10 ? '活跃' : '锁定'; // 如果是数组数据则为 $data['name'] ，例如，使用 SqlDataProvider 的情形。
+                                },
+                            ],
+                            [
+                                'attribute' => 'created_at',
+                                'format' => ['date', 'php:Y-m-d H:i:s'],
+                            ],
+                            [
+                                'attribute' => 'updated_at',
+                                'format' => ['date', 'php:Y-m-d H:i:s'],
+                            ],
+                            [
+                                'class' => 'yii\grid\ActionColumn',
+                                'header' => '操作',
+                                'headerOptions' => ['width' => '150px'],
+                                'template' => '{view} {lock}',
+                                'buttons' => [
+                                    'view' => function ($url) {
+                                        return Html::a("查看", $url, ['target' => '_blank', 'class' => 'btn btn-primary']);
+                                    },
+                                    'lock' => function ($url, $model, $key) {
+                                        return Html::a($model['status'] == 10 ? '锁定' : '解锁', '', ['class' => 'btn btn-info lock_user', 'data-id' => $key]);
                                     },
                                 ],
-                                [
-                                    'attribute' => 'created_at',
-                                    'filter' => false, //不显示搜索框
-                                    'format' => ['date', 'php:Y-m-d H:i:s'],
-                                ],
-                                [
-                                    'attribute' => 'updated_at',
-                                    'filter' => false, //不显示搜索框
-                                    'format' => ['date', 'php:Y-m-d H:i:s'],
-                                ],
-                                [
-                                    'class' => 'yii\grid\ActionColumn',
-                                    'header' => '操作',
-                                    'headerOptions' => ['width' => '150px'],
-                                    'template' => '{view} {lock}',
-                                    'buttons' => [
-                                        'view' => function ($url) {
-                                            return Html::a("查看", $url, ['target' => '_blank', 'class' => 'btn btn-primary']);
-                                        },
-                                        'lock' => function ($url, $model, $key) {
-                                            return Html::a($model['status'] == 10 ? '锁定' : '解锁', '', ['class' => 'btn btn-info lock_user', 'data-id' => $key]);
-                                        },
-                                    ],
-                                ],
                             ],
-                        ]); ?>
-                    </div>
+                        ],
+                    ]); ?>
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
 
 
 <?php
 use yii\helpers\Url;
+
 $csrf = Yii::$app->request->csrfToken;
 $url = Url::toRoute('/auth/status');
-$js = <<<JS
+$js = <<<SCRIPT
     $(".lock_user").on('click', function (e) {
             e.preventDefault();
             var currntVal = $(this).html();
@@ -98,7 +82,7 @@ $js = <<<JS
                 $.ajax({
                     type: 'post',
                     url: "$url",
-                    data: {uid : uid, isLock : isLock, model : 'backend\\\models\\\Admin', _csrf : "$csrf"},
+                    data: {id : uid, status : isLock, model : 'backend\\\models\\\Admin', _csrf : "$csrf"},
                     dataType: 'json',
                     success: function (data) {
                         if (data.status) {
@@ -113,7 +97,9 @@ $js = <<<JS
                 });
             });
         });
-JS;
+
+        menuheight('auth-index');
+SCRIPT;
 
 
 $this->registerJs($js);

@@ -4,9 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c85a0bc4b7faad9a6a0f5dd4ada6f8ff",
-    "content-hash": "a9fda86524c3324c3918b6df5e9f9597",
+    "hash": "ef178b068649b2dc755ed92581502c06",
+    "content-hash": "742c9310b6a2992741f40bf45061c026",
     "packages": [
+        {
+            "name": "2amigos/yii2-qrcode-helper",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-qrcode-helper.git",
+                "reference": "827a79d0e498026119c8cdcf724d81be2e0daa5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/2amigos/yii2-qrcode-helper/827a79d0e498026119c8cdcf724d81be2e0daa5f.zip",
+                "reference": "827a79d0e498026119c8cdcf724d81be2e0daa5f",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\qrcode\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create QrCodes based on libqrencode C library.",
+            "keywords": [
+                "2amigos",
+                "extension",
+                "helper",
+                "qrcode",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2015-03-16 21:26:14"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.5",
@@ -196,6 +252,48 @@
             ]
         },
         {
+            "name": "callmez/yii2-wechat-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/callmez/yii2-wechat-sdk.git",
+                "reference": "cd983eb01de5c26b9c54f453255b3be1c5f9604d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/callmez/yii2-wechat-sdk/cd983eb01de5c26b9c54f453255b3be1c5f9604d.zip",
+                "reference": "cd983eb01de5c26b9c54f453255b3be1c5f9604d",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "callmez\\wechat\\sdk\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CallMeZ",
+                    "email": "callme-z@qq.com"
+                }
+            ],
+            "description": "The wechat api for the Yii framework",
+            "keywords": [
+                "sdk",
+                "wechat",
+                "weixin",
+                "yii2"
+            ],
+            "time": "2016-06-04 03:11:34"
+        },
+        {
             "name": "cebe/markdown",
             "version": "1.1.0",
             "source": {
@@ -257,16 +355,16 @@
         },
         {
             "name": "cliff363825/yii2-kindeditor",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cliff363825/yii2-kindeditor.git",
-                "reference": "90bc5424c14c9242a49ba515dd7923b631ec7c39"
+                "reference": "2e4d3ad5406fbb74f20f9f7a41015b95126a970c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/cliff363825/yii2-kindeditor/90bc5424c14c9242a49ba515dd7923b631ec7c39.zip",
-                "reference": "90bc5424c14c9242a49ba515dd7923b631ec7c39",
+                "url": "https://packagist.phpcomposer.com/files/cliff363825/yii2-kindeditor/2e4d3ad5406fbb74f20f9f7a41015b95126a970c.zip",
+                "reference": "2e4d3ad5406fbb74f20f9f7a41015b95126a970c",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +391,7 @@
                 "kindeditor",
                 "yii2"
             ],
-            "time": "2015-08-24 18:52:37"
+            "time": "2016-05-29 10:21:01"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -493,6 +591,43 @@
             "time": "2016-05-01 08:45:47"
         },
         {
+            "name": "xj/yii2-oauth",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xjflyttp/yii2-oauth.git",
+                "reference": "e783b6b82f4c607078f66dcc2e0f621d56319bca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/xjflyttp/yii2-oauth/e783b6b82f4c607078f66dcc2e0f621d56319bca.zip",
+                "reference": "e783b6b82f4c607078f66dcc2e0f621d56319bca",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-authclient": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "xj\\oauth\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "xjflyttp",
+                    "email": "xjflyttp@gmail.com"
+                }
+            ],
+            "description": "yii2-oauth",
+            "time": "2016-03-15 08:26:48"
+        },
+        {
             "name": "yiisoft/yii2",
             "version": "2.0.8",
             "source": {
@@ -585,6 +720,54 @@
                 "yii2"
             ],
             "time": "2016-04-28 14:50:20"
+        },
+        {
+            "name": "yiisoft/yii2-authclient",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-authclient.git",
+                "reference": "22910bfe0000538f5b3ca1102cd3de0b5d14a0e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-authclient/22910bfe0000538f5b3ca1102cd3de0b5d14a0e2.zip",
+                "reference": "22910bfe0000538f5b3ca1102cd3de0b5d14a0e2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\authclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "External authentication via OAuth and OpenID for the Yii framework",
+            "keywords": [
+                "OpenId",
+                "auth",
+                "oauth",
+                "yii2"
+            ],
+            "time": "2015-09-23 17:26:02"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1044,7 +1227,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "perminder-klair/yii2-dropzone": 20
+        "perminder-klair/yii2-dropzone": 20,
+        "callmez/yii2-wechat-sdk": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

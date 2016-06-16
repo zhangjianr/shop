@@ -34,6 +34,8 @@ return [
         'setWritable' => [
             'backend/runtime',
             'backend/web/assets',
+            'supplier/runtime',
+            'supplier/web/assets',
             'frontend/runtime',
             'frontend/web/assets',
         ],
@@ -44,6 +46,7 @@ return [
         'setCookieValidationKey' => [
             'backend/config/main-local.php',
             'frontend/config/main-local.php',
+            'supplier/config/main-local.php',
         ],
     ],
     'Production' => [

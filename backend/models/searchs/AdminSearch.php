@@ -49,6 +49,17 @@ class AdminSearch extends Admin
             'query' => $query,
         ]);
 
+//        $dataProvider->setSort([
+//            'attributes' => [
+//                'id' => [
+//                    'asc' => ['id' => SORT_ASC],
+//                    'desc' => ['id' => SORT_DESC],
+//                    'default' => SORT_ASC,
+//                    'label' => 'id',
+//                ]
+//            ]
+//        ]);
+
         $this->load($params);
 
         if (!$this->validate()) {

@@ -5,7 +5,6 @@ namespace backend\modules\weixin\controllers;
 use backend\models\Keyword;
 use Yii;
 use backend\models\Wxnewreply;
-use backend\models\search\WxnewreplySearch;
 use common\core\backend\BackendController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,9 +36,6 @@ class WxnewreplyController extends BackendController
      */
     public function actionIndex()
     {
-        $searchModel = new WxnewreplySearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         //调用模型
         $query = Wxnewreply::find();
         $pagination = new Pagination([
@@ -52,8 +48,6 @@ class WxnewreplyController extends BackendController
             ->all();
 
         return $this->render('index', [
-            'searchModel'  => $searchModel,
-            'dataProvider' => $dataProvider,
             'data' 		   => $data ,		//当前页数据
             'pagination'   => $pagination  //分页对象
         ]);
@@ -82,6 +76,15 @@ class WxnewreplyController extends BackendController
         $model = new Wxnewreply();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $keyword = Keyword::findOne(['keyword' => $model->keyword]);
+            if(empty($keyword)){
+                $keyword = new Keyword();
+            }
+            $keyword->status = 1;
+            $keyword->keyword = $model->keyword;
+            $keyword->rid = $model->id;
+            $keyword->save();
+            
             Yii::$app->session->setFlash('keynewcreateid',$model->id);
             return $this->redirect(['/weixin/wxnewreply/index']);
         } else {
@@ -102,6 +105,15 @@ class WxnewreplyController extends BackendController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $keyword = Keyword::findOne(['keyword' => $model->keyword]);
+            if(empty($keyword)){
+                $keyword = new Keyword();
+            }
+            $keyword->status = 1;
+            $keyword->keyword = $model->keyword;
+            $keyword->rid = $model->id;
+            $keyword->save();
+
             Yii::$app->session->setFlash('keynewupdateid',$model->id);
             return $this->redirect(['/weixin/wxnewreply/index']);
         } else {

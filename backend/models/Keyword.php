@@ -4,6 +4,7 @@ namespace backend\models;
 
 use Yii;
 use common\core\backend\BackendActiveRecord;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%keyword}}".
@@ -27,7 +28,7 @@ class Keyword extends BackendActiveRecord
     public function rules()
     {
         return [
-            [['keyword','status'], 'required'],
+            [['keyword'], 'required'],
             [['keyword'], 'unique'],
             [['keyword'], 'string', 'max' => 50],
         ];
@@ -41,6 +42,13 @@ class Keyword extends BackendActiveRecord
         return [
             'id' => 'ID',
             'keyword' => '关键词',
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
         ];
     }
 }

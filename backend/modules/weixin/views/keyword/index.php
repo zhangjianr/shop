@@ -4,73 +4,62 @@ use yii\widgets\LinkPager;
 
 /* @var $this yii\web\View */
 
-$this->title = '后台';
+$this->title = '关键字回复管理';
 $this->params['breadcrumbs'][] = $this->title;
 
 $this->registerCss('table{text-align:center;}table thead tr th{text-align:center;}table thead tr th:nth-child(1){width:24rem;}table thead tr th:nth-child(2){width:24rem;}');
 ?>
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            关键字回复管理
-            <small></small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> 基本管理</a></li>
-            <li class="active">关键字管理</li>
-        </ol>
-    </section>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title"><a href="<?= Url::toRoute(['keyword/create'])?>"><button type="button" class="btn bg-purple">增加关键字</button></a></h3>
-                    </div>
-                    <div class="box-body">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title"><a href="<?= Url::toRoute(['keyword/create']) ?>">
+                        <button type="button" class="btn bg-purple">增加关键字</button>
+                    </a></h3>
+            </div>
+            <div class="box-body">
 
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th>关键字</th>
-                                <th>回复方式</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>关键字</th>
+                        <th>添加时间</th>
+                        <th>修改时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
+                    <?php foreach ($data as $val) { ?>
+                        <tr>
+                            <td><?= $val->keyword ?></td>
+                            <td><?= date('Y-m-d',$val->created_at) ?></td>
+                            <td><?= date('Y-m-d',$val->updated_at) ?></td>
+                            <td>
+                                <a href="<?= Url::toRoute(['/weixin/keyword/update', 'id' => $val->id]) ?>">
+                                    <button type="button" class="btn btn-success">编辑</button>
+                                </a>&nbsp;
+                                <button type="button" class="btn btn-danger replydel" idata="<?= $val->id ?>">删除
+                                </button>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    <?php } ?>
 
-                            <?php foreach($data as $val) { ?>
-                                <tr>
-                                    <td><?= $val->keyword;?></td>
-                                    <td><?php if($val->status == 1){echo '文本回复';}elseif($val->status == 2){echo '图文回复';}else{echo '链接回复';}?></td>
-                                    <td>
-                                        <button type="button" class="btn btn-info reply" idata="<?= $val->id ?>" status="2">图文</button>&nbsp;
-                                        <button type="button" class="btn btn-primary reply" idata="<?= $val->id ?>" status="1">文本</button>&nbsp;
-                                        <button type="button" class="btn btn-warning reply" idata="<?= $val->id ?>" status="3">连接</button>&nbsp;
-                                        <a href="<?= Url::toRoute(['/weixin/keyword/update','id'=>$val->id])?>"><button type="button" class="btn btn-success">编辑</button></a>&nbsp;
-                                        <button type="button" class="btn btn-danger replydel" idata="<?= $val->id ?>">删除</button>&nbsp;
-                                    </td>
-                                </tr>
-                            <?php } ?>
-
-                            </tbody>
-                        </table>
-                        <?= LinkPager::widget(['pagination' => $pagination]); ?>
-                    </div>
-                </div>
+                    </tbody>
+                </table>
+                <?= LinkPager::widget(['pagination' => $pagination]); ?>
             </div>
         </div>
-    </section>
+    </div>
 </div>
+
 
 <?php
 
-$keycreateid = Yii::$app->session->getFlash('keycreateid') ? 1 : 0 ;
-$keyupdateid = Yii::$app->session->getFlash('keyupdateid') ? 1 : 0 ;
+$keycreateid = Yii::$app->session->getFlash('keycreateid') ? 1 : 0;
+$keyupdateid = Yii::$app->session->getFlash('keyupdateid') ? 1 : 0;
 $url = \yii\helpers\Url::toRoute('/weixin/keyword/upreply');
 $delurl = \yii\helpers\Url::toRoute('/weixin/keyword/delreply');
 
@@ -148,10 +137,8 @@ $(".replydel").on("click",function(){
       }
     });
 });
-
+menuheight('weixin-keyword-index');
 JS;
 
 $this->registerJs($script);
 ?>
-
-

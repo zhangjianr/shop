@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Wxmenu */
 
-$this->title = 'Update Wxmenu: ' . $model->name;
+$this->title = '修改自定义菜单';
 $this->params['breadcrumbs'][] = ['label' => 'Wxmenus', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

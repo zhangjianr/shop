@@ -21,10 +21,13 @@ class StatusAction extends Action
 
         if (Yii::$app->request->isAjax) {
             $post = Yii::$app->request->post();
-            $model = $post['model'];
-            $userModel = $model::findOne($post['uid']);
-            $userModel->status = $post['isLock'];
-            $res = $userModel->save();
+            $postModel = $post['model'];
+            $table = $postModel::tableName();
+
+            unset($post['model'],$post['_csrf']);
+
+            $res = Yii::$app->db->createCommand()->update($table, $post, ['id' => $post['id']])->execute();
+
             if ($res) {
 //                if($post['isLock'] == 0){
 //                    $description = '用户ID为：'. $post['uid'] . '的用户已经被解锁';

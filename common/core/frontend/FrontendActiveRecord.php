@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ubuntu
- * Date: 16-5-24
- * Time: 下午1:29
- */
+namespace common\core\frontend;
+
+use yii\db\ActiveRecord;
+
+class FrontendActiveRecord extends ActiveRecord
+{
+
+
+
+}

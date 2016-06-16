@@ -3,7 +3,6 @@ defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 define('WEIXIN', 'weixin');
 
-
 if (!empty ($_GET ['echostr']) && !empty ($_GET ["signature"]) && !empty ($_GET ["nonce"])) {
     $signature = $_GET["signature"];
     $timestamp = $_GET["timestamp"];

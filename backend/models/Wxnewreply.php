@@ -27,9 +27,8 @@ class Wxnewreply extends \common\core\backend\BackendActiveRecord
     public function rules()
     {
         return [
-            [['kid', 'content'], 'required'],
-            [['kid'], 'integer'],
-            [['kid'], 'unique','message'=>'此关键词已被占用'],
+            [['keyword', 'content'], 'required'],
+            [['keyword'], 'string'],
             [['content'], 'string'],
         ];
     }
@@ -41,7 +40,7 @@ class Wxnewreply extends \common\core\backend\BackendActiveRecord
     {
         return [
             'id' => 'ID',
-            'kid' => '关键词',
+            'keyword' => '关键词',
             'content' => '回复内容',
         ];
     }
