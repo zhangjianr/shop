@@ -92,6 +92,7 @@ class ShorturlController extends Controller
     {
         $data = self::accesstoken($code);
         $arr = json_decode($data,'true');
+        print_r($arr);exit();
         $result = self::ifaccesstoken($arr['access_token'], $data['openid']);
         if($result == 0){
             $url = Yii::$app->params['webuserpath'] . $data->access_token .'&openid='. $data->openid .'&lang=zh_CN';
