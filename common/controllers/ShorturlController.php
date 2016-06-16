@@ -80,7 +80,9 @@ class ShorturlController extends Controller
     public function ifaccesstoken($access_token,$openid)
     {
         $url = Yii::$app->params['ifaccesstokenpath'].$access_token.'&openid='.$openid;
-        return Wechat::getHttpscurl($url)->errcode;
+        $result = Wechat::getHttpscurl($url);
+        $data = json_decode($result,true);
+        return $data['errcode'];
     }
 
     /**
@@ -94,9 +96,10 @@ class ShorturlController extends Controller
         $arr = json_decode($data,'true');
         $result = self::ifaccesstoken($arr['access_token'], $arr['openid']);
         if($result == 0){
-            $url = Yii::$app->params['webuserpath'] . $data->access_token .'&openid='. $data->openid .'&lang=zh_CN';
+            $url = Yii::$app->params['webuserinfopath'] . $arr['access_token'] .'&openid='. $arr['openid'] .'&lang=zh_CN';
             return Wechat::getHttpscurl($url);
         }else{
+
             self::getwebuserinfo($code);
         }
     }

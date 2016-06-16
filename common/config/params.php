@@ -41,5 +41,5 @@ return [
     'ifaccesstokenpath' => 'https://api.weixin.qq.com/sns/auth?access_token=',
     
     //微信授权网页获取用户基本信息
-    'webuserpath' => 'https://api.weixin.qq.com/sns/userinfo?access_token=',
+    'webuserinfopath' => 'https://api.weixin.qq.com/sns/userinfo?access_token=',
 ];
